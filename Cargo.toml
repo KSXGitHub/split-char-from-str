@@ -1,0 +1,25 @@
+[package]
+name = "split-first-char"
+version = "0.0.0"
+description = "A small utility to split a string into the first character (type `char`) and the rest (type `&str`)"
+authors = ["khai96_ <hvksmr1996@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+documentation = "https://docs.rs/split-first-char"
+repository = "https://github.com/KSXGitHub/split-first-char.git"
+keywords = [
+  "first",
+  "character",
+]
+categories = ["no-std", "parsing"]
+edition = "2021"
+include = [
+  "/*.rs",
+  "/Cargo.toml",
+  "/README.md",
+  "/LICENSE.md",
+]
+
+[lib]
+name = "split_first_char"
+path = "lib.rs"
