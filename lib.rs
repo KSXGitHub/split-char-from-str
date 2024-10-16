@@ -56,7 +56,7 @@ mod test {
     }
 
     #[test]
-    fn method_deref() {
+    fn deref() {
         enum Input {
             None,
             One,
