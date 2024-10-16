@@ -1,8 +1,6 @@
 #![no_std]
 #![doc = include_str!("README.md")]
 
-use core::ops::Deref;
-
 /// Split a string into a pair of first character and the rest.
 pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
     let mut iter = text.chars();
@@ -12,7 +10,7 @@ pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
 }
 
 /// Convenient trait to call [`split_first_char`] as a method.
-pub trait SplitFirstChar<'a>: Deref<Target = str> + Sized {
+pub trait SplitFirstChar<'a>: Sized {
     /// Split a string into a pair of first character and the rest.
     fn split_first_char(self) -> Option<(char, &'a str)>;
 }
