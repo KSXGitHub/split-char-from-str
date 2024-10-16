@@ -9,8 +9,13 @@ pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
     Some((first, rest))
 }
 
+mod sealed {
+    pub trait Sealed {}
+    impl<'a> Sealed for &'a str {}
+}
+
 /// Convenient trait to call [`split_first_char`] as a method.
-pub trait SplitFirstChar<'a>: Sized {
+pub trait SplitFirstChar<'a>: sealed::Sealed + Sized {
     /// Split a string into a pair of first character and the rest.
     fn split_first_char(self) -> Option<(char, &'a str)>;
 }
