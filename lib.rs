@@ -29,7 +29,7 @@ mod test {
     use core::ops::Deref;
 
     #[test]
-    fn test_split_first_char() {
+    fn method() {
         assert_eq!("abc".split_first_char(), Some(('a', "bc")));
         assert_eq!("x".split_first_char(), Some(('x', "")));
         assert_eq!("".split_first_char(), None);
