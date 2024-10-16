@@ -26,6 +26,7 @@ impl<'a> SplitFirstChar<'a> for &'a str {
 #[cfg(test)]
 mod test {
     use super::{split_first_char, SplitFirstChar};
+    use core::ops::Deref;
 
     #[test]
     fn test_split_first_char() {
@@ -45,5 +46,29 @@ mod test {
             let (_, rest) = text.split_first_char()?;
             Some(rest)
         }
+    }
+
+    #[test]
+    fn method_deref() {
+        enum Input {
+            None,
+            One,
+            Many,
+        }
+
+        impl Deref for Input {
+            type Target = str;
+            fn deref(&self) -> &Self::Target {
+                match self {
+                    Input::None => "",
+                    Input::One => "x",
+                    Input::Many => "abc",
+                }
+            }
+        }
+
+        assert_eq!(Input::None.split_first_char(), None);
+        assert_eq!(Input::One.split_first_char(), Some(('x', "")));
+        assert_eq!(Input::Many.split_first_char(), Some(('a', "bc")));
     }
 }
