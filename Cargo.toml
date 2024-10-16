@@ -1,6 +1,6 @@
 [package]
 name = "split-first-char"
-version = "1.0.0"
+version = "2.0.0"
 description = "A small utility to split a string into the first character (type `char`) and the rest (type `&str`)"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
 readme = "README.md"
