@@ -42,4 +42,4 @@ If you don't need the first character to be a `char`, just use `str.split_at(1)`
 
 ## License
 
-[MIT](https://github.com/KSXGitHub/split-first-char/blob/master/LICENSE.md) © [Hoàng Văn Khải](https://github.com/KSXGitHub/).
+[MIT](https://github.com/KSXGitHub/split-char-from-str/blob/master/LICENSE.md) © [Hoàng Văn Khải](https://github.com/KSXGitHub/).
