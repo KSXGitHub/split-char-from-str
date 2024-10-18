@@ -9,9 +9,9 @@
 /// ```
 pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
     let mut iter = text.chars();
-    let head = iter.next()?;
+    let first = iter.next()?;
     let rest = iter.as_str();
-    Some((head, rest))
+    Some((first, rest))
 }
 
 /// Split a string into a pair of initial part and the last character.
@@ -23,8 +23,8 @@ pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
 pub fn split_last_char(text: &str) -> Option<(&'_ str, char)> {
     let mut iter = text.chars();
     let last = iter.next_back()?;
-    let init = iter.as_str();
-    Some((init, last))
+    let rest = iter.as_str();
+    Some((rest, last))
 }
 
 mod sealed {
