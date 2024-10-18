@@ -11,7 +11,11 @@ keywords = [
   "first",
   "character",
 ]
-categories = ["no-std", "parsing"]
+categories = [
+  "no-std",
+  "parsing",
+  "text-processing",
+]
 edition = "2021"
 include = [
   "/*.rs",
