@@ -4,4 +4,4 @@ version = 3
 
 [[package]]
 name = "split-first-char"
-version = "2.0.1-renamed"
+version = "2.0.1"

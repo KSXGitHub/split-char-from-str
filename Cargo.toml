@@ -1,6 +1,6 @@
 [package]
 name = "split-first-char"
-version = "2.0.1-renamed"
+version = "2.0.1"
 description = "This crate is DEPRECATED, use split-char-from-str instead"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
 readme = "README.md"
