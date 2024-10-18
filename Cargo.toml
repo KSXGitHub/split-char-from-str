@@ -1,7 +1,7 @@
 [package]
 name = "split-first-char"
-version = "2.0.0"
-description = "A small utility to split a string into the first character (type `char`) and the rest (type `&str`)"
+version = "2.0.1-renamed"
+description = "This crate is DEPRECATED, use split-char-from-str instead"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
 readme = "README.md"
 license = "MIT"
