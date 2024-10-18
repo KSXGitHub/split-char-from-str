@@ -2,19 +2,29 @@
 #![doc = include_str!("README.md")]
 
 /// Split a string into a pair of first character and the rest.
+///
+/// ```
+/// # use split_char_from_str::split_first_char;
+/// assert_eq!(split_first_char("abc"), Some(('a', "bc")))
+/// ```
 pub fn split_first_char(text: &str) -> Option<(char, &'_ str)> {
     let mut iter = text.chars();
-    let head = iter.next()?;
+    let first = iter.next()?;
     let rest = iter.as_str();
-    Some((head, rest))
+    Some((first, rest))
 }
 
 /// Split a string into a pair of initial part and the last character.
+///
+/// ```
+/// # use split_char_from_str::split_last_char;
+/// assert_eq!(split_last_char("abc"), Some(("ab", 'c')))
+/// ```
 pub fn split_last_char(text: &str) -> Option<(&'_ str, char)> {
     let mut iter = text.chars();
     let last = iter.next_back()?;
-    let init = iter.as_str();
-    Some((init, last))
+    let rest = iter.as_str();
+    Some((rest, last))
 }
 
 mod sealed {
@@ -25,8 +35,18 @@ mod sealed {
 /// Extension trait that provides methods to split character from a `&str`.
 pub trait SplitCharFromStr<'a>: sealed::Sealed + Sized {
     /// Split a string into a pair of first character and the rest.
+    ///
+    /// ```
+    /// # use split_char_from_str::SplitCharFromStr;
+    /// assert_eq!("abc".split_first_char(), Some(('a', "bc")))
+    /// ```
     fn split_first_char(self) -> Option<(char, &'a str)>;
+
     /// Split a string into a pair of initial part and the last character.
+    /// ```
+    /// # use split_char_from_str::SplitCharFromStr;
+    /// assert_eq!("abc".split_last_char(), Some(("ab", 'c')))
+    /// ```
     fn split_last_char(self) -> Option<(&'a str, char)>;
 }
 

@@ -8,32 +8,32 @@ A small utility to split a string into the first or last character (type `char`)
 
 ```rust
 use split_char_from_str::split_first_char;
-let (head, tail) = split_first_char("abc").unwrap();
-assert_eq!(head, 'a');
-assert_eq!(tail, "bc");
+let (first_char, rest) = split_first_char("abc").unwrap();
+assert_eq!(first_char, 'a');
+assert_eq!(rest, "bc");
 ```
 
 ```rust
 use split_char_from_str::split_last_char;
-let (init, last) = split_last_char("abc").unwrap();
-assert_eq!(init, "ab");
-assert_eq!(last, 'c');
+let (rest, last_char) = split_last_char("abc").unwrap();
+assert_eq!(rest, "ab");
+assert_eq!(last_char, 'c');
 ```
 
 ### Method call
 
 ```rust
 use split_char_from_str::SplitCharFromStr;
-let (head, tail) = "abc".split_first_char().unwrap();
-assert_eq!(head, 'a');
-assert_eq!(tail, "bc");
+let (first_char, rest) = "abc".split_first_char().unwrap();
+assert_eq!(first_char, 'a');
+assert_eq!(rest, "bc");
 ```
 
 ```rust
 use split_char_from_str::SplitCharFromStr;
-let (init, last) = "abc".split_last_char().unwrap();
-assert_eq!(init, "ab");
-assert_eq!(last, 'c');
+let (rest, last_char) = "abc".split_last_char().unwrap();
+assert_eq!(rest, "ab");
+assert_eq!(last_char, 'c');
 ```
 
 ## Alternative
