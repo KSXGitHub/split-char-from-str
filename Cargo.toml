@@ -1,14 +1,16 @@
 [package]
-name = "split-first-char"
-version = "2.0.0"
-description = "A small utility to split a string into the first character (type `char`) and the rest (type `&str`)"
+name = "split-char-from-str"
+version = "0.0.0"
+description = "A small utility to split a string into the first or last character (type `char`) and the rest (type `&str`)"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
 readme = "README.md"
 license = "MIT"
-documentation = "https://docs.rs/split-first-char"
-repository = "https://github.com/KSXGitHub/split-first-char.git"
+documentation = "https://docs.rs/split-char-from-str"
+repository = "https://github.com/KSXGitHub/split-char-from-str.git"
 keywords = [
+  "split",
   "first",
+  "last",
   "character",
 ]
 categories = [
@@ -25,5 +27,5 @@ include = [
 ]
 
 [lib]
-name = "split_first_char"
+name = "split_char_from_str"
 path = "lib.rs"

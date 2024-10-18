@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "split-first-char"
-version = "2.0.0"
+name = "split-char-from-str"
+version = "0.0.0"
